@@ -1,4 +1,3 @@
-
 <ion-navbar *navbar>
   <button menuToggle>
     <ion-icon name="menu" ></ion-icon>
@@ -7,18 +6,59 @@
 </ion-navbar>
 
 
-<ion-content padding class="getting-started">
+<ion-content>
+  <div padding class="getting-started">
+    <h3>Welcome to your first Ionic app!</h3>
 
-  <h3>Welcome to your first Ionic app!</h3>
+    <p>
+      This starter project is our way of helping you get a functional app running in record time.
+    </p>
+    <p>
+      Follow along on the tutorial section of the Ionic docs!
+    </p>
+  </div>
+  <h1 padding class="getting-started">Item card</h1>
+  <ion-card>
+    <img src="http://ionicframework.com/dist/preview-app/www/img/advance-card-bttf.png"/>
+    <ion-card-content>
+      <h2 class="card-title">
+        Nine Inch Nails Live
+      </h2>
+      <p>
+        The most popular industrial group ever, and largely
+        responsible for bringing the music to a mass audience.
+      </p>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <img src="http://ionicframework.com/dist/preview-app/www/img/advance-card-map-madison.png">
+    <button fab fab-right fab-top>
+      <ion-icon name="pin"></ion-icon>
+    </button>
 
-  <p>
-    This starter project is our way of helping you get a functional app running in record time.
-  </p>
-  <p>
-    Follow along on the tutorial section of the Ionic docs!
-  </p>
-  <p>
-    <button primary menuToggle>Toggle Menu</button>
-  </p>
+    <ion-item>
+      <ion-icon name="football" item-left large></ion-icon>
+      <h2>Museum of Football</h2>
+      <p>11 N. Way St, Madison, WI 53703</p>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="wine" item-left large ></ion-icon>
+      <h2>Institute of Fine Cocktails</h2>
+      <p>14 S. Hop Avenue, Madison, WI 53703</p>
+    </ion-item>
+
+    <ion-item>
+      <span item-left>18 min</span>
+      <span item-left>(2.6 mi)</span>
+      <button primary clear item-right>
+        <ion-icon name="navigate"></ion-icon>
+        Start
+      </button>
+    </ion-item>
+
+  </ion-card>
+
+
 
 </ion-content>
