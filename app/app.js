@@ -1,6 +1,7 @@
 import {App, IonicApp, Platform} from 'ionic/ionic';
 import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
 import {ListPage} from './pages/list/list';
+import {ComponentsIonicTwoPage} from './pages/components-ionic-2/components-ionic-2';
 
 
 @App({
@@ -19,7 +20,7 @@ class MyApp {
     this.pages = [
       { title: 'Hello Ionic', component: HelloIonicPage },
       { title: 'My First List', component: ListPage },
-      { title: 'Test', component: HelloIonicPage },
+      { title: 'Ionic components', component: ComponentsIonicTwoPage },
       { title: 'Test2', component: ListPage }
     ];
 
