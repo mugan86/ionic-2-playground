@@ -2,6 +2,7 @@ import {App, IonicApp, Platform} from 'ionic/ionic';
 import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
 import {ListPage} from './pages/list/list';
 import {ComponentsIonicTwoPage} from './pages/components-ionic-2/components-ionic-2';
+import {RaceListPage} from './pages/race-list/race-list';
 
 
 @App({
@@ -21,7 +22,7 @@ class MyApp {
       { title: 'Hello Ionic', component: HelloIonicPage },
       { title: 'My First List', component: ListPage },
       { title: 'Ionic components', component: ComponentsIonicTwoPage },
-      { title: 'Test2', component: ListPage }
+      { title: 'Races', component: RaceListPage }
     ];
 
     this.show_menu = true;
