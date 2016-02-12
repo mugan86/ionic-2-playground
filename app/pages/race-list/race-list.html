@@ -1,0 +1,18 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Formula one {{current}} year races</ion-title>
+</ion-navbar>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="#race of races">
+      <!--<ion-icon name="{{item.icon}}" item-left></ion-icon>-->
+      #{{race.round}} {{race.raceName}}
+      <div class="item-note" item-right>
+        {{race.date}}
+      </div>
+    </button>
+  </ion-list>
+</ion-content>
