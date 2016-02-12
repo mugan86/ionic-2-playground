@@ -7,9 +7,11 @@
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="#race of races">
-      <!--<ion-icon name="{{item.icon}}" item-left></ion-icon>-->
-      #{{race.round}} {{race.raceName}}
+    <button ion-item *ngFor="#race of races; var index=index">
+        <ion-avatar item-left>
+            <img src="img/avatar-cher.png">
+        </ion-avatar>
+      #{{race.round}} #{{index}} {{race.raceName}}
       <div class="item-note" item-right>
         {{race.date}}
       </div>
