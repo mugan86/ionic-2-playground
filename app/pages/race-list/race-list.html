@@ -9,9 +9,9 @@
   <ion-list>
     <button ion-item *ngFor="#race of races; var index=index">
         <ion-avatar item-left>
-            <img src="img/avatar-cher.png">
+            <img src="img/{{images[avatars[index]]}}.png">
         </ion-avatar>
-      #{{race.round}} #{{index}} {{race.raceName}}
+       {{race.raceName}}
       <div class="item-note" item-right>
         {{race.date}}
       </div>
