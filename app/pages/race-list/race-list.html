@@ -7,7 +7,7 @@
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="#race of races; var index=index">
+    <button ion-item *ngFor="#race of races; var index=index" (click)="itemTapped($event, race)">
         <ion-avatar item-left>
             <img src="img/{{images[avatars[index]]}}.png">
         </ion-avatar>
