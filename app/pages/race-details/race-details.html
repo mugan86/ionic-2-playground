@@ -1,0 +1,17 @@
+<ion-navbar *navbar>
+  <button menuToggle *ngIf="!selectedItem">
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>{{selectedItem.raceName}}</ion-title>
+</ion-navbar>
+
+<ion-content>
+ <div *ngIf="selectedItem" class="selection">
+    <!--<b>{{selectedItem.raceName}}</b>-->
+    <p>Round: <b>{{selectedItem.round}}</b></p>
+    <p>Data: {{selectedItem.date}}</p>
+    <div>
+      You navigated here from <b>{{selectedItem.title}}</b>
+    </div>
+  </div>
+</ion-content>
