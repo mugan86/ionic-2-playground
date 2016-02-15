@@ -11,12 +11,25 @@ export class RaceListPage {
     this.nav = nav;
     this.raceService = raceService;
 
+    this.images = [
+                    'advance-card-bttf',
+                    'advance-card-map-madison',
+                    'advance-card-map-mario',
+                    'avatar-amber',
+                    'avatar-ben',
+                    'avatar-cher',
+                    'avatar-dionne',
+                    'avatar-han',
+                    'marty-avatar',
+                    'avatar-travis',
+                    'avatar-tai'
+                    ];
+
     //Call API to show race list in current year
     this.loadRaceList();
-    this.randomValues();
+    this.avatars = this.randomValues();
 
-    this.images = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-    'american-football', 'boat', 'bluetooth', 'build'];
+
   }
 
 
@@ -32,10 +45,10 @@ export class RaceListPage {
 
   randomValues ()
   {
-    var arr = []
+    arr = []
 
     while(arr.length < 20){
-      var randomnumber=Math.ceil(Math.random()*20);
+      var randomnumber=Math.ceil(Math.random()*(this.images.length - 1));
       arr.push(randomnumber);
     }
     console.log(arr);
