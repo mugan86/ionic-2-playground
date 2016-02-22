@@ -15,5 +15,9 @@
     "typescript": "1.7.5"
   },
   "name": "ionic2-tutorial",
-  "description": "ionic2-tutorial: An Ionic project"
+  "description": "ionic2-tutorial: An Ionic project",
+  "cordovaPlugins": [
+    "cordova-plugin-geolocation"
+  ],
+  "cordovaPlatforms": []
 }
