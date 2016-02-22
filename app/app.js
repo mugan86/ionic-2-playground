@@ -3,6 +3,7 @@ import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
 import {ListPage} from './pages/list/list';
 import {ComponentsIonicTwoPage} from './pages/components-ionic-2/components-ionic-2';
 import {RaceListPage} from './pages/race-list/race-list';
+import {MapPage} from './pages/mapPage/mapPage';
 
 
 @App({
@@ -23,6 +24,7 @@ class MyApp {
       { title: 'My First List', component: ListPage },
       { title: 'Ionic components', component: ComponentsIonicTwoPage },
       { title: 'Races', component: RaceListPage }
+      { title: 'Mapa', component: MapPage }
     ];
 
     this.show_menu = true;
@@ -57,6 +59,7 @@ class MyApp {
     // navigate to the new page if it is not the current page
     let nav = this.app.getComponent('nav');
     nav.setRoot(page.component);
+    console.log(page.component);
   }
 
 }
