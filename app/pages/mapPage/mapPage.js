@@ -9,7 +9,7 @@ export class MapPage {
 	constructor(platform: Platform) {
 		this.platform = platform;
 
-		//this.initializeMap();    
+		this.initializeMap();    
 		this.loadMap();
 	}
 
@@ -33,23 +33,39 @@ export class MapPage {
  
 		navigator.geolocation.getCurrentPosition(
 
-		  (position) => {
-		      let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+		  	(position) => {
+	      		let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
-		      let mapOptions = {
-		          center: latLng,
-		          zoom: 15,
-		          mapTypeId: google.maps.MapTypeId.ROADMAP
-		      }
+		      	let mapOptions = {
+			          center: latLng,
+			          zoom: 15,
+			          mapTypeId: google.maps.MapTypeId.ROADMAP
+	      		}
 
-		      this.map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-		  },
+		      	let myLocation = new google.maps.Marker({
+	                position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+		                map: this.map,
+		                animation: google.maps.Animation.DROP,
+		                title: "My Location"
+	            });
 
-		  (error) => {
-		      console.log(error);
-		  }, options
+	      		let content = '<h4><a href="https://twitter.com/mugan86">My Location!</a></h4>' + myLocation.position;          
+	 
+				this.addInfoWindow(myLocation, content);
 
-		);
+				//Load map with map options
+				
+				this.map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+
+				//Add default marker with our location
+				
+				myLocation.setMap(this.map);
+
+			},
+
+			(error) => {
+			  console.log(error);
+			}, options);
 
 	}
 
