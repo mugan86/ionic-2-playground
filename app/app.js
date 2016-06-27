@@ -4,6 +4,7 @@ import {ListPage} from './pages/list/list';
 import {ComponentsIonicTwoPage} from './pages/components-ionic-2/components-ionic-2';
 import {RaceListPage} from './pages/race-list/race-list';
 import {MapPage} from './pages/mapPage/mapPage';
+import {TvShowListPage} from './pages/tv_shows/tv-shows';
 
 
 @App({
@@ -23,8 +24,9 @@ class MyApp {
       { title: 'Hello Ionic', component: HelloIonicPage },
       { title: 'My First List', component: ListPage },
       { title: 'Ionic components', component: ComponentsIonicTwoPage },
-      { title: 'Races', component: RaceListPage }
-      { title: 'Mapa', component: MapPage }
+      { title: 'Races', component: RaceListPage },
+      { title: 'Mapa', component: MapPage },
+      { title: 'Tv Shows', component: TvShowListPage}
     ];
 
     this.show_menu = true;
