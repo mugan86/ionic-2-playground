@@ -1,18 +1,18 @@
 import {Page, NavController} from 'ionic/ionic';
 import {TheMovieDBAPIService} from '../services/TheMovieDBAPIService';
-import {SelectRaceDetailsPage} from '../race-details/race-details';
+import {SelectTVMovieDetailsPage} from '../tv-movie-details/tv-movie-details';
 
 @Page({
-  templateUrl: 'build/pages/race-list/race-list.html',
+  templateUrl: 'build/pages/tv_shows/tv-shows.html',
   providers: [TheMovieDBAPIService]
 })
 
 export class TvShowListPage {
-    constructor(nav: NavController, raceService:TheMovieDBAPIService) {
+    constructor(nav: NavController, movieService:TheMovieDBAPIService) {
         this.nav = nav;
-        this.raceService = raceService;
+        this.movieService = movieService;
 
-        this.title = "2010";
+        this.title = "TV shows start in 2010";
 
         console.log(this.title);
 
@@ -33,6 +33,7 @@ export class TvShowListPage {
         //Call API to show race list in current year
         this.loadTVShows();
         this.avatars = this.randomValues();
+        console.log(this.tv_shows);
     }
 
 
@@ -40,8 +41,8 @@ export class TvShowListPage {
     {
       
 
-        this.raceService.searchTvShowsByYear("2010").subscribe(
-          data => {console.log(data[0].results)},
+        this.movieService.searchTvShowsByYear("2010").subscribe(
+          data => {console.log(this.tv_shows = data[0].results)},
           err => this.logError(err),
           () => console.log('Loading 2010 finish');
         );
@@ -61,7 +62,7 @@ export class TvShowListPage {
 
     itemTapped(event, item) {
         console.log("Click");
-        this.nav.push(SelectRaceDetailsPage, {
+        this.nav.push(SelectTVMovieDetailsPage, {
        item: item
      });
   }
