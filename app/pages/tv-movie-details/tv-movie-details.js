@@ -26,7 +26,7 @@ export class SelectTVMovieDetailsPage {
   }
 
   goToHomepage(url) {
-     console.log(url);
+     console.log("Open URL: " + url);
 		//cordova.InAppBrowser.open(url, "_system", "location=true");
 		window.open(url, '_system', 'location=true');
   }
