@@ -1,0 +1,22 @@
+<ion-navbar *navbar>
+  <button menuToggle *ngIf="!selectedItem">
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>{{selectedItem.original_name}}</ion-title>
+</ion-navbar>
+
+<ion-content>
+ <div *ngIf="selectedItem" class="selection">
+    <!--<b>{{selectedItem.raceName}}</b>-->
+    <img src="https://image.tmdb.org/t/p/w300{{selectedItem.poster_path}}">
+    <p>First Air Date: <b>{{selectedItem.first_air_date}}</b></p>
+    <p>Last Air Date: <b>{{details.last_air_date}}</b></p>
+    <p>Episodes: <b>{{details.number_of_episodes}}</b></p>
+    <p>Seasons: <b>{{details.number_of_seasons}}</b></p>
+    <button *ngIf="details.homepage" primary (click)="goToHomepage(details.homepage)">Homepage</button>
+    <div>
+
+      <!--<br/>You navigated here from <b>{{selectedItem.title}}</b>-->
+    </div>
+  </div>
+</ion-content>
