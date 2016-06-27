@@ -12,7 +12,7 @@ export class TvShowListPage {
         this.nav = nav;
         this.movieService = movieService;
 
-        this.title = "TV shows start in 2010";
+        this.title = "TV shows start in ";
 
         console.log(this.title);
 
@@ -34,6 +34,9 @@ export class TvShowListPage {
         this.loadTVShows();
         this.avatars = this.randomValues();
         console.log(this.tv_shows);
+        this.title = this.title + this.year = "2010";
+
+        
     }
 
 
