@@ -17,4 +17,10 @@ export class TheMovieDBAPIService {
         console.log("Select year: " + year);
         return this.http.get("release_tv_shows_2010_1.json").map(res => res.json());
     }
+
+    getMovieMoreInfo(id) {
+        var url = 'http://api.themoviedb.org/3/tv/' + encodeURI(id) + '?api_key=5fbddf6b517048e25bc3ac1bbeafb919';
+        console.log(url);
+        return this.http.get(url).map(res => res.json());
+    }
 }
