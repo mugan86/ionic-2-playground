@@ -1,4 +1,4 @@
-import {Page, NavController, NavParams} from 'ionic/ionic';
+import {Page, Platform, NavController, NavParams} from 'ionic/ionic';
 import {TheMovieDBAPIService} from '../services/TheMovieDBAPIService';
 
 
@@ -7,8 +7,9 @@ import {TheMovieDBAPIService} from '../services/TheMovieDBAPIService';
   providers: [TheMovieDBAPIService]
 })
 export class SelectTVMovieDetailsPage {
-  constructor(nav: NavController, navParams: NavParams, movieService:TheMovieDBAPIService) {
 
+  constructor(nav: NavController, navParams: NavParams, movieService:TheMovieDBAPIService, platform: Platform) {
+	this.platform = platform;
   	this.movieService = movieService;
     this.nav = nav;
     this.details = [];
@@ -26,5 +27,7 @@ export class SelectTVMovieDetailsPage {
 
   goToHomepage(url) {
      console.log(url);
+		//cordova.InAppBrowser.open(url, "_system", "location=true");
+		window.open(url, '_system', 'location=true');
   }
 }
