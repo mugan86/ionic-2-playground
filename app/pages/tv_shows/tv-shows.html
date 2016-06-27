@@ -1,0 +1,20 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>TESTT</ion-title>
+</ion-navbar>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="#race of races; var index=index" (click)="itemTapped($event, race)">
+        <ion-avatar item-left>
+            <img src="img/{{images[avatars[index]]}}.png">
+        </ion-avatar>
+       {{race.raceName}}
+      <div class="item-note" item-right>
+        {{race.date}}
+      </div>
+    </button>
+  </ion-list>
+</ion-content>
