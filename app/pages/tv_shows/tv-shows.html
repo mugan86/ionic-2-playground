@@ -2,18 +2,18 @@
   <button menuToggle>
     <ion-icon name="menu"></ion-icon>
   </button>
-  <ion-title>TESTT</ion-title>
+  <ion-title>{{title}}</ion-title>
 </ion-navbar>
 
 <ion-content>
   <ion-list>
-    <button ion-item *ngFor="#race of races; var index=index" (click)="itemTapped($event, race)">
+    <button ion-item *ngFor="#tv of tv_shows; var index=index" (click)="itemTapped($event, tv)">
         <ion-avatar item-left>
-            <img src="img/{{images[avatars[index]]}}.png">
+            <img src="https://image.tmdb.org/t/p/w300{{tv.poster_path}}"/>
         </ion-avatar>
-       {{race.raceName}}
+       {{tv.original_name}}
       <div class="item-note" item-right>
-        {{race.date}}
+        First Air Date: {{tv.first_air_date}}
       </div>
     </button>
   </ion-list>
