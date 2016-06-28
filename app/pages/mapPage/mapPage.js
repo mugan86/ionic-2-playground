@@ -83,6 +83,28 @@ export class MapPage {
 	 
 	} 
 
+	addMarkers(){
+
+		let lats = [43.17435195, 43.18461688, 43.19009317, 43.18887015, 43.2052032];
+		let lngs = [-2.44430863, -2.45711319, -2.44808768, -2.47486081, -2.47535927];
+		
+		for (var j = 0; j < 5; j++)
+		{
+			let marker = new google.maps.Marker({
+			    map: this.map,
+			    animation: google.maps.Animation.DROP,
+			    position: new google.maps.LatLng(lats[j], lngs[j])
+			  });
+			 
+			  let content = '<h4><a href="http://codesyntax.com">Information!</a></h4>' + marker.position;          
+			 
+			  this.addInfoWindow(marker, content);
+		}
+ 
+	  
+	 
+	} 
+
 	addInfoWindow(marker, content){
  
 	  let infoWindow = new google.maps.InfoWindow({
