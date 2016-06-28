@@ -35,15 +35,11 @@ export class TvShowListPage {
         this.avatars = this.randomValues();
         console.log(this.tv_shows);
         this.title = this.title + this.year = "2010";
-
-        
     }
 
 
     loadTVShows()
     {
-      
-
         this.movieService.searchTvShowsByYear("2010").subscribe(
           data => {console.log(this.tv_shows = data[0].results)},
           err => this.logError(err),
