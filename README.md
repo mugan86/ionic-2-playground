@@ -44,3 +44,14 @@ cordova plugin add cordova-plugin-inappbrowser
 Older versions of cordova can still install via the deprecated id ( stale 0.3.12 )
 cordova plugin add org.apache.cordova.inappbrowser
 ```
+
+**Whitelist plugin (cordova 5.0.0 > necesary)
+
+```sh
+cordova plugin add cordova-plugin-whitelist
+```
+
+***Install Ng2 Translate
+```sh
+npm install ng2-translate --save
+```
