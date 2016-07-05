@@ -1,0 +1,7 @@
+{
+    "title" : "Internazionalización",   
+    "segment": {    
+        "puppies": "puppies(es)",
+        "kittens": "Kittens (es)"
+    }
+}
