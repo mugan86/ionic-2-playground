@@ -6,7 +6,6 @@ import {RaceListPage} from './pages/race-list/race-list';
 import {MapPage} from './pages/mapPage/mapPage';
 import {TvShowListPage} from './pages/tv_shows/tv-shows';
 
-
 @App({
   templateUrl: 'build/app.html',
   config: {} // http://ionicframework.com/docs/v2/api/config/Config/
@@ -26,7 +25,8 @@ class MyApp {
       { title: 'Ionic components', component: ComponentsIonicTwoPage },
       { title: 'Races', component: RaceListPage },
       { title: 'Mapa', component: MapPage },
-      { title: 'Tv Shows', component: TvShowListPage}
+      { title: 'Tv Shows', component: TvShowListPage},
+      //{ title: 'Modal example', component: BasicPage}
     ];
 
     this.show_menu = true;
